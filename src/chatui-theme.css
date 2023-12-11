@@ -1,0 +1,77 @@
+:root {
+    --brand-1: #9dced4;
+    --brand-2: #a6bee7;
+    --brand-3: #c1dff5;
+    --blue: #51a6f8;
+    --green: #74d46b;
+    --orange: #f89330;
+    --red: #f16765;
+    --yellow: #f5bb31;
+    --marked-color: #000000;
+    --btn-primary-color: #111;
+}
+.ChatApp{
+    border-radius: 15px;
+}
+.MessageContainer{
+    border-radius: 0;
+}
+.Navbar{
+    border-radius: 10px 10px 0 0;
+}
+.Message .Bubble,
+.QuickReplies{
+    border-radius: 0;
+}
+.ChatFooter {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+}
+.ChatApp {
+    background-color: #ffffff;
+}
+.Notice {
+    background-color: #ffffff;
+}
+.MessageContainer {
+    background-image: linear-gradient(180deg, #c9e2f0 0%, #cbdde3 49%, #e5eff3 98%);
+}
+.Navbar {
+    background-color: #c1e9ff;
+    background-image: linear-gradient(180deg, #bedcec 0%, #c9e2f0 100%);
+    background-position: center bottom;
+    border: 0;
+    box-shadow: none;
+}
+.Navbar-title {
+    color: #111;
+}
+.Message.left .Bubble {
+    background-color: #dfeef5;
+    padding: 5px 10px;
+}
+.Message.right .Bubble {
+    background-color: #d7e9f3;
+    color: #000000;
+    padding: 5px 10px;
+}
+.QuickReply.highlight {
+    border-color: #97cee7;
+}
+.QuickReplies,
+.ChatFooter {
+    background-color: #e5eff3;
+}
+.Message.left .Bubble {
+    border-radius: 10px;
+}
+.Message.right .Bubble {
+    border-radius: 10px;
+}
+.Card {
+    border-radius: 10px;
+}
+.slide-in-right-item{
+    animation: none;
+}
