@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <div className="FloatChat">
-        <FloatChat needHelpEvent="no"/>
+        <FloatChat />
             <SsoLogin />
         </div>
     </>

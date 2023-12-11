@@ -9,32 +9,14 @@ import {oneDark} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 type msgSide = "left" | "right" | "center" | "pop" | undefined;
 
-export function FloatChat({ needHelpEvent }: { needHelpEvent: string }) {
+export function FloatChat() {
     const { messages, appendMsg, setTyping } = useMessages([]);
     React.useEffect(() => {
         console.log('load chat history');
         loadChatHistory();
     }, []);
-    const AI_CHAT_HISTORY_KEY: string = "AI_CHAT_HISTORY";
+    const AI_CHAT_HISTORY_KEY: string = "ECON330_CHAT_HISTORY";
     const AI_CLIENT_KEY: string = "AI_CLIENT_ID";
-
-    React.useEffect(() => {
-        if (needHelpEvent === 'yes') {
-            const helpInfo = JSON.parse(localStorage.getItem("help") || '{}');
-            let desc: string;
-            if (helpInfo.block_description !== "") {
-                desc = helpInfo.block_description;
-            }else {
-                let section = helpInfo.block_id.split('-')[1];
-                section = Number(section) + 1;
-                desc = 'section ' + String(section)
-            }
-
-            const prompt = "I'm working on " + desc + ". I just ran my code: " + helpInfo.code + " and got an error: " + helpInfo.error_message + ". Can you help me?";
-            handleNewMsg(prompt, 'right');
-            sendMsgToBackend(prompt);
-        }
-    }, []);
 
     function handleSend(type: string, val: string) {
         // get login token
