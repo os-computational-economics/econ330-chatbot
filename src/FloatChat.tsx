@@ -181,43 +181,14 @@ export function FloatChat() {
     }
 
 
-    const defaultQuickReplies = [
-        {
-            key: '0',
-            icon: 'compass',
-            name: 'Give me a hint',
-            isHighlight: true,
-        },
-        {
-            key: '1',
-            icon: 'keyboard-circle',
-            name: 'Give me examples',
-            isHighlight: true,
-        },
-    ];
-
-    function handleQuickReplyClick(quickReply: any) {
-        switch (quickReply.key) {
-            case '0':
-                handleSend('text','Can you give me some hint?');
-                break;
-            case '1':
-                handleSend('text','Can you give me a code example on what you just explained?');
-                break;
-        }
-    }
-
-
     return (
         <>
             <Chat
                 locale="en-US"
-                navbar={{ title: 'XXXXXX' }}
+                navbar={{ title: 'ECON330 Final Essay Writing Mate' }}
                 messages={messages}
                 renderMessageContent={renderMessageContent}
                 onSend={(type, content) => handleSend(type, content)}
-                quickReplies={defaultQuickReplies}
-                onQuickReplyClick={handleQuickReplyClick}
                 placeholder={'Ask me anything...'}
             />
             <ConfigProvider
