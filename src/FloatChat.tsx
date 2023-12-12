@@ -34,7 +34,7 @@ export function FloatChat() {
 
     function sendMsgToBackend(msg: string) {
         setTyping(true);
-        fetch('https://dev-api-v1.courseyai.com/chat/chat', {
+        fetch('https://api-v1.courseyai.com/chat/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ export function FloatChat() {
         localStorage.setItem(AI_CHAT_HISTORY_KEY, JSON.stringify(chatHistory));
         messages.splice(0, messages.length);
         const login_token = getCookie("cy_login_token");
-        const url = 'https://dev-api-v1.courseyai.com/chat/clearChatHistory?login_token=' + login_token + '&course_id=ECON330';
+        const url = 'https://api-v1.courseyai.com/chat/clearChatHistory?login_token=' + login_token + '&course_id=ECON330';
         fetch(url, {
             method: 'GET',
         }).then(response => {

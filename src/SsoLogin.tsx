@@ -84,7 +84,7 @@ export default function SsoLogin() {
         const case_id = getCookie('cy_case_id');
         if (login_token !== undefined && case_id !== undefined) {
             fetch(
-                'https://dev-api-v1.courseyai.com/chat/loginStatus?' +
+                'https://api-v1.courseyai.com/chat/loginStatus?' +
                 new URLSearchParams({
                     login_token: login_token,
                     case_id: case_id,
