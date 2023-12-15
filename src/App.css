@@ -45,10 +45,22 @@
 
 .FloatChat {
   z-index: 999;
-  position: fixed;
+  position: relative;
   top: 5vh;
   width: 50vw;
   height: 90vh;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 0 10px 5px rgba(173, 216, 230, 0.5); /* light blue glow */
+  background-color: rgba(238, 244, 250, 0);
+  overflow: auto;
+}
+
+.StuHist {
+  z-index: 999;
+  position: relative;
+  top: 5vh;
+  width: 90vw;
+  height: fit-content;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0 0 10px 5px rgba(173, 216, 230, 0.5); /* light blue glow */
   background-color: rgba(238, 244, 250, 0);
