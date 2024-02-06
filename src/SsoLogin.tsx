@@ -84,7 +84,7 @@ export default function SsoLogin() {
         const case_id = getCookie('cy_case_id');
         if (login_token !== undefined && case_id !== undefined) {
             fetch(
-                'https://api-v1.courseyai.com/chat/loginStatus?' +
+                'https://api-v1.courseyai.com/teacher/loginStatus?' +
                 new URLSearchParams({
                     login_token: login_token,
                     case_id: case_id,
@@ -155,7 +155,7 @@ export default function SsoLogin() {
             let currentUrl = window.location.href;
             currentUrl = currentUrl.split('?')[0];
             const CWRU_SSO_URL =
-                'https://login.case.edu/cas/login?service=https://api-v1.courseyai.com/chat/authCwruSso/' +
+                'https://login.case.edu/cas/login?service=https://api-v1.courseyai.com/teacher/authSso/' +
                 clientID;
             window.location.href = CWRU_SSO_URL + '?came_from=' + currentUrl;
         }

@@ -112,9 +112,10 @@ const StuHist = () => {
                             });
                         }else{
                             params.login_token = login_token;
+                            params.course_id = 'cyc100004';
                             return request<{
                                 data: StuChatHistItem[];
-                            }>('https://api-v1.courseyai.com/teacher/330-ai-chat-history/get', {
+                            }>('https://api-v1.courseyai.com/teacher/getStudentChatHistory', {
                                 params,
                                 errorHandler: (error) => {
                                     console.log(error.response.status);

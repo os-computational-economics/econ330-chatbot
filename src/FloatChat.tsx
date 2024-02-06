@@ -42,8 +42,8 @@ export function FloatChat() {
             body: JSON.stringify({
                 'login_token': getCookie("cy_login_token"),
                 'message': msg,
-                'module_id': "ECON330",
-                'course_id': "ECON330",
+                'module_id': "cyc100004",
+                'course_id': "cyc100004",
             })
         })
             .then(response => {
@@ -119,7 +119,7 @@ export function FloatChat() {
         localStorage.setItem(AI_CHAT_HISTORY_KEY, JSON.stringify(chatHistory));
         messages.splice(0, messages.length);
         const login_token = getCookie("cy_login_token");
-        const url = 'https://api-v1.courseyai.com/chat/clearChatHistory?login_token=' + login_token + '&course_id=ECON330';
+        const url = 'https://api-v1.courseyai.com/chat/clearChatHistory?login_token=' + login_token + '&course_id=cyc100004';
         fetch(url, {
             method: 'GET',
         }).then(response => {
@@ -185,7 +185,7 @@ export function FloatChat() {
         <>
             <Chat
                 locale="en-US"
-                navbar={{ title: 'ECON330 Final Essay Writing Mate' }}
+                navbar={{ title: 'Literature Review Helper' }}
                 messages={messages}
                 renderMessageContent={renderMessageContent}
                 onSend={(type, content) => handleSend(type, content)}
